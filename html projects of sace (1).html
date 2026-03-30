@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SACE - Stride Action Community Empowerment</title>
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .news-bar {
+      background-color:aqua;
+      color: darkred;
+      padding: 10px;
+      overflow: hidden;
+      position: relative;
+      
+    }
+
+    .news-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scrollNews 12s linear infinite;
+    }
+
+    @keyframes scrollNews {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .label {
+      font-weight: bold;
+      margin-right: 20px;
+    }
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+/* NAVBAR */
+nav{
+    background:green;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+/* MOBILE */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('sace1.jpg');
+    background-size:cover;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero button{
+    padding:12px 20px;
+    margin:10px;
+    border:none;
+    background:#4caf50;
+    color:white;
+    cursor:pointer;
+}
+
+/* SECTIONS */
+section{
+    padding:50px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* BOXES */
+.boxes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.box{
+    flex:1;
+    min-width:250px;
+    padding:20px;
+    background:#f4f4f4;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:scale(1.05);
+}
+
+/* GALLERY */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    object-fit:cover;
+}
+
+.gallery img{
+    
+    width:20%;
+    border-radius:10px;
+    
+}
+
+/* FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:500px;
+    margin:auto;
+}
+
+form input, form textarea{
+    padding:10px;
+}
+
+form button{
+    background:#1b5e20;
+    color:white;
+    padding:12px;
+    border:none;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav ul{
+        position:absolute;
+        top:60px;
+        right:0;
+        background:#1b5e20;
+        flex-direction:column;
+        display:none;
+        padding:20px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .gallery img{
+        width:100%;
+    }
+}
+
+.show{
+    display:flex !important;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>SACE</h2>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<ul id="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+
+<div class="news-bar">
+  <span class="label">LATEST:</span>
+  <div class="news-content">
+    Welcome to sace website | New services launched | Contact us for more info | Thank you for visiting our website
+  </div>
+</div>
+<!-- HERO -->
+<div class="hero">
+<h1>Stride Action Community Empowerment</h1>
+<p>Empowering Communities for a Better Future</p>
+<button onclick="scrollToSection('contact')">Get Involved</button>
+<button onclick="scrollToSection('projects')">Our Work</button>
+</div>
+
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>About Us</h2>
+<p>SACE is a community-based organization focused on education, youth empowerment, and sustainable development.</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<h2>Our Services</h2>
+
+<div class="boxes">
+<div class="box">Education Support</div>
+<div class="box">Health Awareness</div>
+<div class="box">Youth Empowerment</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+<h2>Projects</h2>
+
+<div class="boxes">
+<div class="box">School Programs</div>
+<div class="box">Cleanups</div>
+<div class="box">Skills Training</div>
+</div>
+</div class="container">
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact Us</h2>
+
+<form onsubmit="showMessage(event)">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<p id="msg" style="color:green; text-align:center;"></p>
+
+<p>Phone: 0786561399</p>
+</div>
+</section>
+
+
+<div class="mother-box">
+
+<section id="gallery">
+<div class="container">
+<h2>Gallery</h2>
+
+<div class="gallery">
+<img src="sace2.jpg">
+<img src="sace3.jpg">
+<img src="sace4.jpg">
+<img src="sace5.jpg">
+<img src="sace4.jpg">
+<img src="sace6.jpg">
+
+</div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 SACE</p>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/2567861399" class="whatsapp">💬</a>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView();
+}
+
+function showMessage(e){
+    e.preventDefault();
+    document.getElementById("msg").innerHTML="Message sent successfully!";
+}
+</script>
+
+</body>
+</html>
